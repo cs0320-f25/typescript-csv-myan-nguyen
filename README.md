@@ -56,6 +56,6 @@
 
 #### Team members and contributions (include cs logins):
 
-#### Collaborators (cslogins of anyone you worked with on this project and/or generative AI):
-#### Total estimated time it took to complete project:
-#### Link to GitHub Repo:  
+#### Collaborators (cslogins of anyone you worked with on this project and/or generative AI): I used a lot of Google and Stack Overflow to learn TypeScript syntax and conventions in this project
+#### Total estimated time it took to complete project: 6 hours
+#### Link to GitHub Repo:  https://github.com/cs0320-f25/typescript-csv-myan-nguyen
