@@ -1,0 +1,19 @@
+1. Correctness
+What makes a CSV parser “correct”? We're not asking for additional input-output pairs here, but fairly precise, natural-language descriptions. Put another way, what kinds of general properties should your tests be checking about your CSV parser?
+
+For example, if we were writing a program to control a robot arm in an assembly plant, we might write properties like:
+the program never extends the arm beyond 5 feet; 
+the arm always returns to its neutral rest position when the system is shut down; or
+if sensors detect movement in the assembly area, movement immediately freezes.
+
+A CSV parser should be able to take a file, convert it to fit a particular schema, and output a more readable version of the data. In particular, it should look out for edge cases that could be in the inputs of the data and be able to effectively clean the data to be interpreted. Some properties our tests should be checking are its ability to handle errors and foreign inputs, should be able to take in a type of schema, be compatible with many kinds of data, and preserve the structure and contents of the data.
+
+2. Random, On-Demand Generation
+Suppose we gave you a function that randomly produced CSV data on demand. You could then call this class from your testing code. How might you use this source of random data to expand the power of your testing?
+
+During testing, if I was given random bits of CSV data, my tests would have to be more generic to fit more use cases and account for different kinds of CSV data. Also, this function would be helpful in developing tests because with more data comes more edge cases to account for.
+
+3. Overall experience, Bugs encountered and resolved
+In what ways did this sprint differ from prior programming assignments you’ve done? Did anything surprise you? Did you encounter any bugs during your work on this sprint? If yes, what were they and how did you fix them? If not, how do you think that you managed to avoid them?
+
+For this sprint in particular, there was a big learning curve with using Zod and general syntax in writing TypeScript functions. When writing the function, it was difficult figuring out how to communicate errors without printing them, and with a lot of Googling error throwing conventions, I was able to figure it out. The bugs I had were in my testing suite, since I changed the parameters for the parser function and the data types that were outputted. Some of the tests I ran before now did not fit the type that my function produced, so I had to unfortunately typecast in my tests.
